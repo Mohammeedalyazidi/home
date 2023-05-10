@@ -1,0 +1,27 @@
+﻿@model User
+
+<h1 dir="rtl">تسجيل</h1>
+
+<form asp-controller="User" asp-action="Register" method="post" dir="rtl">
+    <div class="form-group">
+        <label asp-for="FirstName" dir="rtl">الاسم الأول:</label>
+        <input asp-for="FirstName" class="form-control" dir="rtl" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName" dir="rtl">اسم العائلة:</label>
+        <input asp-for="LastName" class="form-control" dir="rtl" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" dir="rtl">البريد الإلكتروني:</label>
+        <input asp-for="Email" class="form-control" dir="rtl" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" dir="rtl">كلمة المرور:</label>
+        <input asp-for="Password" class="form-control" dir="rtl" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary" dir="rtl">تسجيل</button>
+</form>

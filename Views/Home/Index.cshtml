@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "عكس الاسم";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container" dir="rtl">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <div class="form-group">
+                    <label for="name">أدخل اسمك:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <button type="submit" class="btn btn-primary">عكس الاسم</button>
+            </form>
+
+            @if (ViewData["ReversedName"] != null)
+            {
+                <hr>
+                <div class="alert alert-success" role="alert">
+                    الاسم بالعكس: @ViewData["ReversedName"]
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        text-align: right;
+    }
+
+    button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+        text-align: right;
+    }
+</style>
